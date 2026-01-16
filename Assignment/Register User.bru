@@ -1,0 +1,25 @@
+meta {
+  name: Register User
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://127.0.0.1:8000/api/auth/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Viewer User",
+    "email": "viewer@test.com",
+    "password": "password123"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
